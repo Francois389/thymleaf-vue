@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <body>
+    <h1 th:text="${title}"></h1>
+    <p>Ici il y aura un composant Vue</p>
+    <div id="ici"></div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script th:src="@{/Counter/Counter.umd.min.js}"></script>
+  <script th:src="@{/Counter/Counter.umd.js}"></script>
+  <script th:src="@{/test.js}"></script>
+  <script>
+    (function() {
+      new Vue({
+        components: {
+          chart: Counter
+        }
+      }).$mount('#ici')
+    })();
+  </script>
+    </body>
+</html>
